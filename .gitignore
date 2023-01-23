@@ -29,3 +29,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+#envは秘匿性のある情報を扱うファイルなので、コミットの対象から外す設定
+.env
