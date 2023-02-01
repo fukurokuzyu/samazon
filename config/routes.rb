@@ -16,6 +16,7 @@ Rails.application.routes.draw do
      resources :major_categories, except: [:new]
      resources :categories, except: [:new]
      resources :products, except: [:show]
+     resources :orders, only: [:index]
   end
   
  
@@ -49,7 +50,7 @@ Rails.application.routes.draw do
       get  "mypage/favorite", :to => "users#favorite"
       delete "mypage/delete", :to => "users#destroy"
     end
-  end  
+  end 
   
     resources :products do
      member do
